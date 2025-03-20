@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --destructive: 0 84.2% 60.2%;
+  }
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #FF8C42 0%, #FF5F6D 50%, #FF4B6A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-border {
+  position: relative;
+  border: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+             linear-gradient(45deg, #FF8C42, #FF5F6D, #FF4B6A) border-box;
+}
+
+.gradient-button {
+  background: linear-gradient(45deg, #FF8C42, #FF5F6D, #FF4B6A);
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* Touch handling for mobile menu */
+@media (hover: none) {
+  .mobile-menu-touch {
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  from {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg) translateX(120px) rotate(360deg);
+  }
+}
+
+@keyframes orbit-wide {
+  from {
+    transform: rotate(0deg) translateX(180px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(180px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-wide-reverse {
+  from {
+    transform: rotate(0deg) translateX(180px) rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg) translateX(180px) rotate(360deg);
+  }
+}
+
+@keyframes orbit-wider {
+  from {
+    transform: rotate(0deg) translateX(220px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(220px) rotate(-360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(-20px) scale(1.1);
+  }
+  50% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-30px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(20px);
+  }
+  75% {
+    transform: translateY(-20px) translateX(-10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 6s ease-in-out infinite;
+}
+
+.animate-float-particle {
+  animation: float-particle 8s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbit-reverse 20s linear infinite;
+}
+
+.animate-orbit-wide {
+  animation: orbit-wide 25s linear infinite;
+}
+
+.animate-orbit-wide-reverse {
+  animation: orbit-wide-reverse 30s linear infinite;
+}
+
+.animate-orbit-wider {
+  animation: orbit-wider 35s linear infinite;
+}
+
+.rotate-15 {
+  transform: rotate(15deg);
+}
+
+.-rotate-15 {
+  transform: rotate(-15deg);
+}
+
+/* Custom styles for mortgage calculator */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.focus\:ring-sunset-start:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(255, 140, 66, var(--tw-ring-opacity));
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+.focus\:border-sunset-start:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 140, 66, var(--tw-border-opacity));
+}
